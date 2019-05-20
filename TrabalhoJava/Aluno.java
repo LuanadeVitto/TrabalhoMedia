@@ -76,18 +76,18 @@ public class Aluno{
 		media = (a1+2*a2)/3;
 	}
 	public void situacaoAluno(int qtdAulas){
-		qtdAulas = (qtdAulas * 75/100);
+		qtdAulas = qtdAulas - (qtdAulas * 75/100);
 		
-		if((media >= 5) && (qtdFaltas >= qtdAulas)){
+		if((media >= 5) && (qtdFaltas <= qtdAulas)){
 			status = "Aprovado";
 		}
-		else if(((media < 5) && (media >= 3)) && (qtdFaltas >= qtdAulas)){
+		else if(((media < 5) && (media >= 3)) && (qtdFaltas <= qtdAulas)){
 			status = "Recuperação";
 		}
-        else if((media < 3) && (qtdFaltas >= qtdAulas)){
+        else if((media < 3) && (qtdFaltas <= qtdAulas)){
 			status = "Reprovado por nota";
 		}  
-		else if(qtdFaltas <= qtdAulas){
+		else if(qtdFaltas >= qtdAulas){
 			status = "Reprovado por falta";
 		}
 	}
