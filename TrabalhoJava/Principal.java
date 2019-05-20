@@ -1,20 +1,37 @@
+import java.util.Scanner;
+
 class Principal{
 	
 	public static void main (String[] args){
 		Aluno a1 = new Aluno();
 		
-		a1.setP1(8.0);
-		a1.setMa1(8.0);
-		a1.setMb1(10.0);
+		Scanner scan = new Scanner(System.in);
 		
-		a1.setP2(6.0);
-		a1.setMa2(5.0);
-		a1.setMb2(7.0);
+		System.out.print("Informe a nota P1: ");
+        a1.setP1(scan.nextDouble());
 		
-		a1.setQtdFaltas(3);
+		System.out.print("Informe a nota Ma1: ");
+        a1.setMa1(scan.nextDouble());
+		
+		System.out.print("Informe a nota Mb1: ");
+        a1.setMb1(scan.nextDouble());
+		
+		System.out.print("Informe a nota P2: ");
+        a1.setP2(scan.nextDouble());
+		
+		System.out.print("Informe a nota Ma2: ");
+        a1.setMa2(scan.nextDouble());
+		
+		System.out.print("Informe a nota Mb2: ");
+        a1.setMb2(scan.nextDouble());
+		
+		System.out.print("Quantidade de faltas: ");
+        a1.setQtdFaltas(scan.nextInt());
 		
 		a1.calcularMedia();
-		a1.situacaoAluno(20);
+		
+		System.out.print("Quantidade de Aulas: ");
+        a1.situacaoAluno(scan.nextInt());
 		
 		a1.imprimir();
 	}
